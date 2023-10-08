@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h1>Ejercicio 2</h1>
+    <h2>Calculadora arcaica</h2>
+
+    <p>Dime un número: <input type="number" id="cajaTexto1"></p>
+    <p>Dime otro número: <input type="number" id="cajaTexto2"></p>
+
+    <button onclick="resultado()">Resultado</button>
+
+    <p>El resultado de la suma es: <span id="suma"></span></p>
+    <p>El resultado de la resta es: <span id="resta"></span></p>
+    <p>El resultado de la multiplicación es: <span id="multiplicacion"></span></p>
+    <p>El resultado de la división es: <span id="division"></span></p>
+
+    <script>
+        function resultado() {
+            let mensaje1 = Number(document.getElementById("cajaTexto1").value);
+            let mensaje2 = Number(document.getElementById("cajaTexto2").value);
+
+            document.getElementById("suma").innerHTML = mensaje1 + mensaje2;
+            document.getElementById("resta").innerHTML = mensaje1 - mensaje2;
+            document.getElementById("multiplicacion").innerHTML = mensaje1 * mensaje2;
+            document.getElementById("division").innerHTML = mensaje1 / mensaje2;
+        }
+    </script>
+</body>
+</html>
